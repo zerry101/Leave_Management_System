@@ -7,31 +7,37 @@ import { FormControl } from '@angular/forms';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit  {
+export class AppComponent implements OnInit {
 
-  constructor(public fb:FormBuilder){
+
+  serviceLineArray: Array<String> = ["special leave","personal leave","public holiday"]
+
+  constructor(public fb: FormBuilder) {
 
   }
 
 
   ngOnInit(): void {
-      this.setupform();
+    this.setupform();
   }
 
-  leaveForm:FormGroup<any>=new FormGroup('')
+  leaveForm: FormGroup<any> = new FormGroup('')
 
-  setupform(){
-    this.leaveForm=this.fb.group({
-      Id:[""],
-      Name:[""],
-      LastName:[""],
-      GPN:[""],
-      ServiceLine:[""]
+  setupform() {
+    this.leaveForm = this.fb.group({
+      Id: [""],
+      Name: [""],
+      LastName: [""],
+      GPN: [""],
+      ServiceLine: [""]
     })
 
   }
 
-  onSubmit(){
+
+
+
+  onSubmit() {
     console.log(this.leaveForm.value);
 
   }
