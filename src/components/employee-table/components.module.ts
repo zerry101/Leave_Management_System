@@ -13,6 +13,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
 import {MatRadioModule} from '@angular/material/radio';
 import { EmployeeAppliedLeaveComponent } from './employee-applied-leave/employee-applied-leave.component';
+import { LeaveBalanceComponent } from './leave-balance/leave-balance.component';
 
 
 // import { AppModule } from 'src/app/app.module';
@@ -24,7 +25,8 @@ import { EmployeeAppliedLeaveComponent } from './employee-applied-leave/employee
   declarations: [
     LeaveComponent,
     EmployeeTableComponent,
-    EmployeeAppliedLeaveComponent
+    EmployeeAppliedLeaveComponent,
+    LeaveBalanceComponent
   ],
   imports: [
     CommonModule,
@@ -43,7 +45,8 @@ import { EmployeeAppliedLeaveComponent } from './employee-applied-leave/employee
   exports:[
     LeaveComponent,
     EmployeeTableComponent,
-    EmployeeAppliedLeaveComponent
+    EmployeeAppliedLeaveComponent,
+    LeaveBalanceComponent
   ],
 
 })

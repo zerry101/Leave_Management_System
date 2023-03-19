@@ -47,6 +47,10 @@ export class EmployeeAppliedLeaveComponent {
   Duration_date:any|undefined;
   Duration_month:any|undefined;
   Duration_year:any|undefined;
+  Duration_end:any|undefined;
+  Duration_start:any|undefined;
+  Date=new Date();
+
   // Date:any|undefined=this.EmployeeAppliedLeaveData.duration.end._i;
   fetchData() {
     this.EmployeeAppliedLeaveData = this.ds.getleaveData();
@@ -59,6 +63,9 @@ export class EmployeeAppliedLeaveComponent {
     this.Duration_date=this.EmployeeAppliedLeaveData.duration.end._i.date;
     this.Duration_month=this.EmployeeAppliedLeaveData.duration.end._i.month;
     this.Duration_year=this.EmployeeAppliedLeaveData.duration.end._i.year;
+    this.Duration_end=this.EmployeeAppliedLeaveData.duration.end._d;
+    this.Duration_start=this.EmployeeAppliedLeaveData.duration.start._d;
+
     console.log(this.EmployeeAppliedLeaveData);
     console.log(this.EmployeeAppliedLeaveData.GPN);
     console.log(this.EmployeeAppliedLeaveData.AppliedLeaveTypes);
@@ -67,6 +74,12 @@ export class EmployeeAppliedLeaveComponent {
     console.log(this.EmployeeAppliedLeaveData.duration.end._i.date);
     console.log(this.EmployeeAppliedLeaveData.duration.end._i.month);
     console.log(this.EmployeeAppliedLeaveData.duration.end._i.year);
+    console.log(this.EmployeeAppliedLeaveData.duration.end._d);
+    console.log(this.Date);
+    console.log(  Math.floor((Date.UTC(this.Date.getFullYear(), this.Date.getMonth(), this.Date.getDate()) - Date.UTC(this.Duration_end.getFullYear(), this.Duration_end.getMonth(), this.Duration_end._i.date.getDate()) ) /(1000 * 60 * 60 * 24))
+    );
+
+
 
 
     // console.log(Object.keys(this.EmployeeAppliedLeaveData));

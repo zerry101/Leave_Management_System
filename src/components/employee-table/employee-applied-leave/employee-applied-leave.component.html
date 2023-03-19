@@ -8,20 +8,35 @@
     <mat-card class="mt-3">
       <mat-card-content class="m-3">{{GPN}}</mat-card-content>
     </mat-card>
+    <li style="font-size: medium;">GPN</li>
     <mat-card class="mt-3">
       <mat-card-content class="m-3">{{AppliedLeaveTypes}}</mat-card-content>
     </mat-card>
+    <li style="font-size: medium;">AppliedLeaveTypes</li>
+
     <mat-card class="mt-3">
       <mat-card-content class="m-3">{{isactive}}</mat-card-content>
     </mat-card>
+    <li style="font-size: medium;">isactive</li>
+
     <mat-card class="mt-3">
       <mat-card-content class="m-3">{{comment}}</mat-card-content>
     </mat-card>
+    <li style="font-size: medium;">comment</li>
+
+
     <mat-card class="mt-3">
-      <mat-card-content class="m-3">{{Duration_date}}/{{Duration_month}}/{{Duration_year}}</mat-card-content>
+      <!-- <mat-card-content class="m-3">{{Duration_date}}/{{Duration_month}}/{{Duration_year}}</mat-card-content> -->
+      <mat-card-content class="m-3">{{Duration_start| date}}</mat-card-content>
     </mat-card>
+    <li style="font-size: medium;">Duration_start</li>
+
     <mat-card class="mt-3">
-      <mat-card-content class="m-3">Simple card</mat-card-content>
+      <!-- <mat-card-content class="m-3">{{Duration_date}}/{{Duration_month}}/{{Duration_year}}</mat-card-content> -->
+      <mat-card-content class="m-3">{{Duration_end| date}}</mat-card-content>
     </mat-card>
+    <li style="font-size: medium;">Duration_end</li>
+
+
   </div>
 </mat-card>
