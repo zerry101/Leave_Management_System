@@ -1,11 +1,32 @@
-<form class="example-form">
-  <mat-form-field class="example-full-width">
-    <mat-label>Favorite food</mat-label>
-    <input matInput placeholder="Ex. Pizza" value="Sushi">
-  </mat-form-field>
+<div class="container mt-5">
+  <form [formGroup]="leaveForm" class="example-form" (ngSubmit)="onSubmit()">
+    <mat-form-field class="example-full-width">
+      <mat-label>Id</mat-label>
+      <input matInput formControlName="Id" placeholder="Id">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Name</mat-label>
+      <input matInput formControlName="Name" placeholder="Name">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>LastName</mat-label>
+      <input matInput formControlName="LastName" placeholder="LastName">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Name</mat-label>
+      <input matInput placeholder="Ex. Pizza">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>GPN</mat-label>
+      <input matInput formControlName="GPN" placeholder="GPN">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>ServiceLine</mat-label>
+      <input matInput formControlName="ServiceLine" placeholder="ServiceLine">
+    </mat-form-field>
+    <button type="submit">
+      Submit
+    </button>
+  </form>
 
-  <mat-form-field class="example-full-width">
-    <mat-label>Leave a comment</mat-label>
-    <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
-  </mat-form-field>
-</form>
+</div>
