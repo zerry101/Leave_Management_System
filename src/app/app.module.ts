@@ -9,27 +9,32 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
-import { EmployeeTableComponent } from 'src/components/employee-table/employee-table.component';
+// import { EmployeeTableComponent, ComponentsModule } from 'src/components/employee-table/employee-table/employee-table.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
+import { ComponentsModule } from "../components/employee-table/components.module";
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    EmployeeTableComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatInputModule,
-    ReactiveFormsModule,
-    MatSelectModule,
-    MatButtonModule,
-    MatCardModule,
-    HttpClientModule
-
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        // RouterModule.forChild([]),
+        // CommonModule
+        // EmployeeTableComponent,
+    ],
+    providers: [],
+    bootstrap: [AppComponent],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatInputModule,
+        ReactiveFormsModule,
+        MatSelectModule,
+        MatButtonModule,
+        MatCardModule,
+        HttpClientModule,
+        CommonModule,
+        ComponentsModule
+    ]
 })
 export class AppModule { }

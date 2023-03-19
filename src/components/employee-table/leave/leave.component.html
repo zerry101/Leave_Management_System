@@ -1,0 +1,59 @@
+<mat-card>
+  <div class="container  text-center">
+
+
+      <mat-card-content class="m-5">Leave Form</mat-card-content>
+    <!-- </mat-card> -->
+
+    <form [formGroup]="leaveForm" class="example-form mt-3" (ngSubmit)="onSubmit()">
+      <mat-form-field class="example-full-width">
+        <mat-label>GPN</mat-label>
+        <input type="text" matInput formControlName="GPN" placeholder="GPN">
+      </mat-form-field>
+
+
+      <!-- <mat-form-field class="example-full-width">
+        <mat-label>Shipping Date</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="duration" >
+        <mat-hint>DD/MM/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker  #picker></mat-datepicker>
+      </mat-form-field> -->
+      <mat-form-field class="example-form mt-3" appearance="fill">
+        <mat-label>Enter a date range</mat-label>
+        <mat-date-range-input formGroupName="duration" [rangePicker]="picker">
+          <input matStartDate formControlName="start" placeholder="Start date">
+          <input matEndDate formControlName="end" placeholder="End date">
+        </mat-date-range-input>
+        <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-date-range-picker #picker></mat-date-range-picker>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Applied Leave Types</mat-label>
+        <mat-select formControlName="AppliedLeaveTypes">
+          <mat-option  *ngFor="let appliedleave  of AppliedLeaveTypes" [value]="appliedleave">
+            {{appliedleave}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+
+        <input type="text" matInput formControlName="isactive" placeholder="isactive">
+      </mat-form-field>
+
+
+      <mat-form-field class="example-full-width">
+        <textarea matInput formControlName="comment" name="questionText" cols="40" rows="4" placeholder="Comment"  required></textarea>
+           </mat-form-field>
+
+      <button class="example-full-width" type="submit" mat-raised-button color="primary">Submit</button>
+
+
+    </form>
+
+  </div>
+
+  </mat-card>
