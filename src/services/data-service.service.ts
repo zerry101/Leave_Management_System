@@ -36,4 +36,12 @@ export class DataServiceService {
     return this.formData ;
   }
 
+  leaveFormData:any={};
+   postleaveData(data:any){
+    this.leaveFormData=data;
+   }
+   getleaveData(){
+    return this.leaveFormData;
+   }
+
 }

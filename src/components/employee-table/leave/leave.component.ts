@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
+import { DataServiceService } from 'src/services/data-service.service';
 import { MAT_DATE_FORMATS } from "@angular/material/core";
 @Component({
   selector: 'app-leave',
@@ -25,7 +26,7 @@ import { MAT_DATE_FORMATS } from "@angular/material/core";
 })
 export class LeaveComponent implements OnInit {
 
-  constructor(public fb: FormBuilder) { }
+  constructor(public fb: FormBuilder,public ds:DataServiceService) { }
 
   ngOnInit(): void {
     this.setupform();
@@ -57,6 +58,13 @@ export class LeaveComponent implements OnInit {
   onSubmit(){
 console.log(this.leaveForm.value);
 console.log(this.leaveForm.controls['duration']);
+
+
+this.ds.postleaveData(this.leaveForm.value);
+console.log("this is form data");
+
+console.log(this.ds.getleaveData());
+// this.
 
 
   }
