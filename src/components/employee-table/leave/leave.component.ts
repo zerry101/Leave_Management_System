@@ -64,7 +64,6 @@ this.ds.postleaveData(this.leaveForm.value);
 console.log("this is form data");
 
 console.log(this.ds.getleaveData());
-// this.
 
 
   }

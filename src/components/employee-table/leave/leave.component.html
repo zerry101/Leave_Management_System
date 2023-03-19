@@ -2,7 +2,7 @@
   <div class="container  text-center">
 
 
-      <mat-card-content class="m-5">Leave Form</mat-card-content>
+    <mat-card-content class="m-5">Leave Form</mat-card-content>
     <!-- </mat-card> -->
 
     <form [formGroup]="leaveForm" class="example-form mt-3" (ngSubmit)="onSubmit()">
@@ -33,7 +33,7 @@
       <mat-form-field class="example-full-width" appearance="fill">
         <mat-label>Applied Leave Types</mat-label>
         <mat-select formControlName="AppliedLeaveTypes">
-          <mat-option  *ngFor="let appliedleave  of AppliedLeaveTypes" [value]="appliedleave">
+          <mat-option *ngFor="let appliedleave  of AppliedLeaveTypes" [value]="appliedleave">
             {{appliedleave}}
           </mat-option>
         </mat-select>
@@ -46,8 +46,9 @@
 
 
       <mat-form-field class="example-full-width">
-        <textarea matInput formControlName="comment" name="questionText" cols="40" rows="4" placeholder="Comment"  required></textarea>
-           </mat-form-field>
+        <textarea matInput formControlName="comment" name="questionText" cols="40" rows="4" placeholder="Comment"
+          required></textarea>
+      </mat-form-field>
 
       <button class="example-full-width" type="submit" mat-raised-button color="primary">Submit</button>
 
@@ -56,4 +57,4 @@
 
   </div>
 
-  </mat-card>
+</mat-card>

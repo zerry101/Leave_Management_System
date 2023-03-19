@@ -12,6 +12,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
 import {MatRadioModule} from '@angular/material/radio';
+import { EmployeeAppliedLeaveComponent } from './employee-applied-leave/employee-applied-leave.component';
 
 
 // import { AppModule } from 'src/app/app.module';
@@ -22,7 +23,8 @@ import {MatRadioModule} from '@angular/material/radio';
 @NgModule({
   declarations: [
     LeaveComponent,
-    EmployeeTableComponent
+    EmployeeTableComponent,
+    EmployeeAppliedLeaveComponent
   ],
   imports: [
     CommonModule,
@@ -40,7 +42,8 @@ import {MatRadioModule} from '@angular/material/radio';
   ],
   exports:[
     LeaveComponent,
-    EmployeeTableComponent
+    EmployeeTableComponent,
+    EmployeeAppliedLeaveComponent
   ],
 
 })
